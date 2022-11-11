@@ -1,0 +1,20 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 11 Nov 2022 13:57:15 at https://iitk.ac.in/aero/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://iitk.ac.in/aero/ -O1 "C:\My Web Sites\vin26" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:00:51	Error: 	Exit requested by shell or user
+14:00:51	Warning: 	File not added due to mirror cancel: https://iitk.ac.in/aero/data/MSR-17-05-22.pdf
+14:00:55	Error: 	Exit requested by shell or user
+14:00:55	Error: 	"" (-1) at link https://iitk.ac.in/aero/team-members (from https://iitk.ac.in/aero/)
+14:00:55	Error: 	Exit requested by shell or user
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 40 seconds : 150 links scanned, 146 files written (30715860 bytes overall) [30935245 bytes received at 140614 bytes/sec]
+(4 errors, 1 warnings, 0 messages)
+* * MIRROR ABORTED! * *
+The current temporary cache is required for any update operation and only contains data downloaded during the present aborted session.
+The former cache might contain more complete information; if you do not want to lose that information, you have to restore it and delete the current cache.
+This can easily be done here by erasing the hts-cache/new.* files]

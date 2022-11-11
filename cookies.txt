@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+iitk.ac.in	TRUE	/	FALSE	1999999999	ed805bdabeb68904106a0b30d8740820	lualc2ru9n6n9elb11d2iloto4
+

@@ -1,0 +1,1384 @@
+
+@import "https://iitk.ac.in/aero/templates/iit-kanpur/css/template-override.css";
+@import "https://iitk.ac.in/aero/templates/iit-kanpur/css/template-article.css";
+@import "https://iitk.ac.in/aero/templates/iit-kanpur/css/template-theme.css";
+
+
+@font-face{
+	font-family:'Titillium Web';
+	src:url('https://iitk.ac.in/aero/templates/iit-kanpur/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+	font-style: regular;
+	font-weight:400;
+}
+@font-face{
+	font-family:'Titillium Web';
+	src:url('https://iitk.ac.in/aero/templates/iit-kanpur/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+	font-style: bold;
+	font-weight:600;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+body{
+	background-color:var(--wtk-bodybg);
+	font-family: 'Titillium Web', sans-serif, Arial !important;
+	
+}
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6
+{	
+	font-weight:600!important;	
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--wtk-heading); 
+	font-weight:600!important;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif, Helvetica, Arial;
+	/*font-size:revert!important;*/
+}
+
+h1:after,h2:after,h3:after{
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: var(--wtk-heading-after);
+    display: block;
+    margin-top: 3px; 
+}
+
+h1.no-after:after,h2.no-after:after,h3.no-after:after{
+	content: none;
+}
+
+.wtk-links
+{
+	color: var(--wtk-links)!important;
+	font-weight: 600;
+}
+.wtk-links:hover
+{
+	font-weight:600;
+	color: var(--wtk-links-hover)!important;
+	text-decoration:underline;
+}
+a:hover{
+	color:#FFB400!important;
+}
+
+ .wtk-login-btn
+ {
+	position: fixed;
+    transform: rotate(-90deg);
+    right: 0;
+    top: 50%;
+    z-index: 201;
+ }
+.wtk-login
+{
+	
+}
+
+.h-100
+{
+	height:100%;
+}
+/* ================================Use for Google Language Translate bar on site ===============================*/
+.wtk-lang-bar
+{
+	position: fixed;
+    top: 1px;
+    right: 10px;
+    z-index: 1020;	
+}
+
+.wtk-lang-bar select
+{
+    border-radius: .6rem;
+}
+.wtk-lang-bar select:focus {
+	outline: none;
+}
+/* .wtk-lang-bar::before{ */
+	/* font-family:"FontAwesome"; */
+	/* content:"\f1ab"; */
+	/* color:white; */
+	/* position: absolute; */
+	/* font-size:20px; */
+    /* left: -25px; */
+    /* top: 1px; */
+/* } */
+
+.wtk-lang-bar .moduletable {
+    display: inline-block;
+}
+
+.wtk-lang-bar .moduletable:nth-child(1) {
+    margin-top:2px;
+}
+
+.wtk-lang-bar .moduletable:nth-child(1) a {
+    color:var(--wtk-white);
+	font-size: 14px!important;
+}
+
+.wtk-lang-bar .moduletable:nth-child(2) {
+    margin-bottom:-5px;
+}
+
+
+/*-------------------Google Language Translater -------------------------*/
+
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+/* .navbar-brand font>font:before{ */
+/* content:"आईआईटी"; */
+/* } */
+
+/*================================This is Use for text style and color of site ===================================*/
+
+.wtk-overlay-menu
+{
+	position: absolute;
+	background-color:rgba(0, 0, 0, 0.5);
+    /* top: 30px; */
+    z-index: 300;
+    /* left: 0; */
+    /* right: 0; */
+	
+}
+
+
+.wtk-text p, .wtk-text ol, .wtk-text ul, .wtk-text table, .wtk-text span /* added on 05-08-2020 for article content with same color */
+{
+	color: var(--wtk-text)!important;
+}
+
+.wtk-text a
+{
+	color: var(--wtk-links);
+	
+}
+.wtk-text a:hover
+{
+	color: var(--wtk-links-hover);
+	/* text-decoration:underline; */
+}
+.wtk-text-primary
+{
+	color:var(--wtk-primary)!important;
+}
+.wtk-text-secondary
+{
+	color:var(--wtk-secondary)!important;
+}
+
+.wtk-bg-primary{
+	background-color:var(--wtk-primary)!important;
+}
+
+.wtk-bg-secondary{
+	background-color:var(--wtk-secondary)!important;
+}
+.wtk-bg-gradient{
+	background: linear-gradient(-30deg, var(--wtk-secondary), var(--wtk-bodybg), var(--wtk-secondary));
+}
+
+
+.overlay .wtk-email a{
+	color:var(--wtk-white);
+}
+/* This is created for Team Member in Computer centre detail info tabs */
+.wtk-nav-links{
+	background-color:var(--wtk-secondary)!important;
+	color:var(--wtk-white)!important;
+	border-color:transparent!important;
+}
+
+.wtk-nav-links.active{
+	background-color:var(--wtk-primary)!important;
+	color:var(--wtk-white)!important;
+	border-color:transparent!important;
+}
+
+.wtk-nav-links:hover, .wtk-nav-links.active:hover {
+	color:var(--wtk-white)!important;
+	border-color:transparent!important;
+}
+
+.jmm-simple-tabs .tab-content
+{
+	min-height:150px;
+	border: 1px solid var(--wtk-primary);
+	padding: .75rem;
+	border-bottom-right-radius:.5rem;
+	border-bottom-left-radius:.5rem;
+}
+
+table
+{
+	color: var(--wtk-secondary)!important;
+}
+
+
+.card{
+	border-color: #A9A9A9;
+	transition: all ease .25s;
+}
+.card:hover
+{
+border-color: var(--wtk-secondary);
+/* transform: scale(1.005); */
+}
+
+/*   ------------below code is use for creating flip card -------------*/
+.wtk-card{
+	height: 100%;
+    width: 100%;
+	perspective: 800px;
+	
+}
+.wtk-card:hover .wtk-card-front
+	{
+        transform: rotateY(-180deg);
+	}
+.wtk-card:hover .wtk-card-back
+	{
+		transform: rotateY(0deg);
+	}
+		
+.wtk-card-front
+{
+	padding: .75rem;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--wtk-secondary);
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: .5s;
+	border-radius: 7px;
+}
+.wtk-card-back
+{
+	padding: .75rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	border: 1px solid var(--wtk-primary);
+	border-radius: 7px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: .5s;
+    color: #000;
+}
+
+
+
+/* card on click fliped  -----*/
+/*   ------------below code is use for creating flip card -------------*/
+.wtk-card-flip{
+	height: 100%;
+    width: 100%;
+	perspective: 800px;
+	
+}
+.wtk-card-flip.flipped .wtk-card-front
+	{
+        transform: rotateY(-180deg);
+	}
+.wtk-card-flip.flipped .wtk-card-back
+	{
+		transform: rotateY(0deg);
+	}
+		
+
+
+.card-img-top{
+	max-height: 210px;
+    height: 30vmax;
+}
+
+
+.wtk-img-corner:before{
+    content:"";
+    position:absolute;
+    background: url(https://iitk.ac.in/aero/templates/iit-kanpur/images/corner-1.png) no-repeat;
+    top:0;
+    /* left:-25px; */
+    bottom: 0;
+	left:0;
+	right:0;
+    /* width: 50px; */
+    /* -webkit-transform: skew(-20deg); */
+    /* -moz-transform: skew(-20deg); */
+    /* -ms-transform: skew(-20deg); */
+    /* transform: skew(-20deg); */
+}
+.wtk-img-corner:after{
+    content:"";
+    position:absolute;
+    background: url(https://iitk.ac.in/aero/templates/iit-kanpur/images/corner.png) no-repeat;
+    top:0;
+    /* right:-25px; */
+    bottom: 0;
+	left:0;
+	right:0;
+    /* width: 50px; */
+    /* -webkit-transform: skew(-20deg); */
+    /* -moz-transform: skew(-20deg); */
+    /* -ms-transform: skew(-20deg); */
+    /* transform: skew(-20deg); */
+}
+/*===========Flip card close here================*/
+
+.table-striped tr:nth-child(odd){
+	background-color: #effaff!important;
+}
+
+.back-top{
+    float: right;
+    display:none;
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    border-radius: 50%;
+    z-index: 999;
+	background-color:var(--wtk-primary);
+	padding: 8px 14px;
+    text-align: center;
+	-webkit-box-shadow: 5px 10px 15px -5px var(--wtk-black);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    5px 10px 15px -5px var(--wtk-black);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         5px 10px 15px -5px var(--wtk-black);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    border: 2px solid var(--wtk-menu-text);
+}
+.back-top.show
+{
+display:block;
+}
+
+.td-center1 td:nth-child(1)
+{
+text-align:center;
+}
+.td-center2 td:nth-child(2)
+{
+text-align:center;
+}
+.td-center3 td:nth-child(3)
+{
+text-align:center;
+}
+.td-center4 td:nth-child(4)
+{
+text-align:center;
+}
+.td-center5 td:nth-child(5)
+{
+text-align:center;
+}
+.td-center6 td:nth-child(6)
+{
+text-align:center;
+}
+
+.new-event{
+	position: absolute;   
+    font-size: 10px;    
+    padding: 0 5px;
+    color: var(--wtk-white);    
+	margin:0 5px;
+	animation: flash-new 2s linear infinite;
+}
+@keyframes flash-new {
+  0% {
+    background: var(--wtk-secondary);
+  }
+  /* Adding a step in the middle */
+  50% {
+    background: var(--wtk-primary);
+	color:yellow;
+  }
+  100% {
+    background: var(--wtk-secondary);
+  }
+}
+
+
+/*Bootstrap custom code ===============*/
+.carousel-control-next, .carousel-control-prev {
+width: 7%!important;
+
+}
+.carousel-control-next:focus, .carousel-control-prev:focus
+{
+	    color: var(--wtk-white);
+    text-decoration: none;
+    outline: 0;
+    opacity: .9!important;
+	
+}
+
+
+/* Accordion
+================================================== */
+
+.acc {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .acc__card {
+    margin: 0.5em;
+    position: relative;
+  }
+  .acc__title {
+    background: var(--wtk-white);
+    box-shadow: 0 0 20px rgba(0,0,0, .2);
+    color: var(--wtk-secondary);
+    cursor: pointer;
+    display: block;
+    padding: 0.5em 0.5em;
+    position: relative;
+    text-align: left;
+    font-weight: 600;
+}
+    .acc__title::after {
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid #4a6e78;
+      border-bottom: 1px solid #4a6e78;
+      position: absolute;
+      right: 10px;
+      content: " ";
+      top: 17px;
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-in-out;
+    }
+    .acc__title.active::after {
+      transform: rotate(45deg);
+      transition: all 0.2s ease-in-out;
+    }
+  
+  .acc__panel {
+    background: var(--wtk-white);
+    color: #212121;
+    display: none;
+    margin: 0;
+    padding: 1em .75em;/* changes on date 13-07-2020 from 2em*/
+    text-align: left;
+  }
+
+/* ================================================================== Header Style for top logo and menu */
+.header-style
+{
+    position: relative; 
+    z-index:300; 
+    /* background-color:rgba(0, 0, 0, 0.5); */
+    background-color: var(--wtk-header);
+}
+
+.header-logo
+{
+    position: absolute; 
+    top:3px; 
+    left:10px; 
+    background-color:var(--wtk-header);
+    /* border-radius:10%; */
+    padding: 5px;
+    /* border: 1px solid var(--wtk-white); */
+}
+
+.dept{
+	/* margin-left:15px; */
+}
+
+.dept p:nth-child(1)
+{
+    font-size: 2.7vw;
+    /*font-weight: 600;*/ 
+    color:var(--wtk-white);
+    margin-bottom: 0px!important;
+    /* margin-left:160px; */
+}
+.dept p:nth-child(2)
+{
+    display: block;
+    font-size: 2.5vmin;
+    /* font-weight: 600; */
+    color:var(--wtk-white);
+    margin-bottom: 0px!important;
+    /* margin-left:160px; */
+
+}
+.copy-text p
+{
+    color:var(--wtk-white);
+    margin-bottom: 0em;
+	/* font-size:12px; */
+}
+
+/*=================================================================== Stick header on scroll down */
+.main-menu-stick{
+    width:100%;
+    background-color: var(--wtk-menu2-bg);   
+    /* text-align:center; */
+	padding:0px 10px!important; /*Made changes on 24-06-2020 from  7px 10px to 0px 5px*/
+    position:relative;
+	-webkit-box-shadow: 0px 10px 10px -10px #000;
+	-moz-box-shadow: 0px 10px 10px -10px #000;
+	box-shadow: 0px 10px 10px -10px #000;
+    /* height:50px; */
+        -webkit-animation: fade-in 0.7s;
+      -moz-animation: fade-in 0.7s;
+    animation: fade-in 0.7s;
+	border-bottom: 2px solid var(--wtk-links-hover)!important;
+  }
+  .main-menu-stick.sticky-content{
+   position:fixed;
+   /* padding: 10px!important; */
+   top: 30px;   /* change from 36 to 38 on 24-06-2020*/
+   background-color:var(--wtk-menu2-bg);
+        -webkit-animation: slide-down 0.7s;
+      -moz-animation: slide-down 0.7s;
+      animation: slide-down 0.7s;
+  
+  }
+  @-webkit-keyframes slide-down { 0% { opacity:0; background-color: var(--wtk-white); transform:translateY(-100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg);transform:translateY(0);}}
+  
+  @-moz-keyframes slide-down { 0% { opacity:0; background-color: var(--wtk-white); transform:translateY(-100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg);transform:translateY(0);}}
+  
+  @keyframes slide-down { 0% { opacity:0; background-color: var(--wtk-white); transform:translateY(-100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg);transform:translateY(0);}}
+
+  @-webkit-keyframes slide-up { 0% { opacity:0;background-color: var(--wtk-menu2-bg); transform:translateY(100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg); transform:translateY(0);}}
+  @-moz-keyframes slide-up { 0% { opacity:0;background-color: var(--wtk-menu2-bg); transform:translateY(100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg); transform:translateY(0);}}
+  @keyframes slide-up { 0% { opacity:0;background-color: var(--wtk-menu2-bg); transform:translateY(100%);}100% { opacity:0.9; background-color: var(--wtk-menu2-bg); transform:translateY(0);}}
+
+/* @-webkit-keyframes fade-in { 
+      from {opacity:0.5; background-color: #CC6B6B;} 
+      to {opacity:1; background-color: #CC6B6B;}
+    }
+@-moz-keyframes fade-in { 
+        from {opacity:0.5; background-color: #CC6B6B;} 
+        to {opacity:1; background-color: #CC6B6B;}
+        }
+@keyframes fade-in { 
+    from {opacity:0.5; background-color: #CC6B6B;} 
+    to {opacity:1; background-color: #CC6B6B;}
+    } */
+  .top-menu
+  {
+    position:sticky; 
+    line-height: 1; 
+    top:0; 
+    z-index:900; 
+    background-color:var(--wtk-secondary);
+  }    
+    
+  .top-menu .navbar-brand
+  {
+      padding: 0px 0px!important;
+  }
+
+  .top-menu{
+    padding:5px 10px!important;
+	}
+
+
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color:var(--wtk-white)!important;
+    /* margin-bottom: 10px; Made changes on 24-06-2020*/
+}
+.main-menu-stick .navbar-brand{
+    display: none;
+}
+.main-menu-stick.sticky-content .navbar-brand{
+    display: block;
+}
+.main-menu-stick.sticky-content .navbar-toggler{
+    margin-bottom: 0px;
+}
+/* .navbar ul li a:after {
+    background-color: var(--wtk-primary);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #00548f;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: all .15s ease-in;
+    z-index: 1;
+
+} */
+  /* ======================= END HERE ==============================*/
+
+/* ============================================================Bootstrap Button CSS Updated code */
+.btn-outline-site {
+    /* color: var(--wtk-primary); */
+    /* border-color: var(--wtk-primary); */
+	color: var(--wtk-btn-outline-text);
+    border-color: var(--wtk-btn);
+	transition: all ease 300ms;
+}
+.btn-outline-site:hover {
+    color: var(--wtk-btn-text-hover)!important;
+    background-color: var(--wtk-btn-hover);
+    border-color: var(--wtk-btn-hover);
+}
+
+.btn-site {
+    color: var(--wtk-btn-text)!important;
+    /* background-color: var(--wtk-primary); remove on 06-07-2020 */
+    /* border-color: var(--wtk-primary); */
+	/* background: linear-gradient(-10deg, var(--wtk-primary) , var(--wtk-secondary)); */
+	background-color: var(--wtk-btn);
+    border-color: var(--wtk-btn);
+	transition: all ease .1s;
+	
+}
+.btn-site:hover {
+    color: var(--wtk-btn-text-hover)!important;
+    /* background-color: #ff3535; remove on 06-07-2020 */
+	/* background: linear-gradient(-10deg, var(--wtk-secondary), var(--wtk-primary)); */
+    background-color: var(--wtk-btn-hover);
+    border-color: var(--wtk-btn-hover);
+}
+
+
+.input-group-append .btn-site{
+    border-bottom-right-radius: .25rem!important;
+    border-top-right-radius: .25rem!important;
+}
+
+/* .dropdown-item:focus, .dropdown-item:hover { */
+    /* color: var(--wtk-light)!important; */
+    /* text-decoration: none; */
+    /* background-color: #d1d4fd!important ; */
+/* } */
+
+.dropdown-menu {
+    z-index:200!important;
+}
+
+/* main div[id]::before{
+display: block;
+height: 6rem;
+margin-top: -6rem;
+content: "";
+} */
+
+a:hover{
+    text-decoration: none;
+}
+
+.main-content {
+    min-height: 450px;
+	/* margin-top:85px; */
+	width:85%!important;
+}
+.large-icon {
+    font-size: 13em !important;
+}
+.contact .contact-address {
+    padding: 0 1.5rem;
+}
+.navbar .mod-languages {
+    padding-bottom: 0.425rem;
+    padding-top: 0.425rem;
+}
+.lang-inline {
+    list-style: outside none none;
+    margin: 0;
+}
+.lang-inline > li {
+    display: inline;
+    margin-left: 8px;
+}
+
+.tags.inline {
+    padding-left: 0;
+}
+.tags.inline li {
+    display: inline;
+}
+.item-image {
+    margin-bottom: 20px;
+}
+
+.autocomplete-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: var(--wtk-white);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.autocomplete-suggestion {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.autocomplete-suggestion:hover, .autocomplete-suggestion:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.autocomplete-suggestion.active, .autocomplete-suggestion:active {
+  color: var(--wtk-white);
+  text-decoration: none;
+  background-color: #007bff;
+}
+
+
+
+.hide-content{
+	display:none;
+}
+
+
+/* .category-module>li
+{
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 8px;
+} */
+
+.newsflash-vert
+{
+    list-style: none;
+    padding-left: 0px;
+}
+.newsflash-item
+{
+    
+    margin:25px 0;
+    text-align:justify;
+}
+
+
+/* ===========================================================Read more buttons CSS */
+.newsflash-vert .readmore
+{
+    padding:10px;    
+    background-color: #929292;
+    border-radius: 8px;
+    text-decoration: none;
+    color:white;
+}
+
+.newsflash-vert .readmore:hover
+{
+    padding:10px;
+    background-color: #7c7b7b;
+    border-radius: 8px;
+    text-decoration: none;
+    color:var(--wtk-white);
+}
+
+
+/* =============================================================   Tab CSS ======== */
+#article1-tabs
+{
+    border-bottom: teal 1px solid;
+}
+
+.tabs
+{
+    display: flex;
+}
+.tabs h3{
+    margin-bottom: 0;
+}
+.tabs dt a
+{
+    padding:0 20px;
+    color:#15317E;    
+}
+
+.tabs .closed
+{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all ease 0.5s;
+}
+
+
+.tabs .open, .tabs .closed:hover
+{
+    display: inline-flex;
+    border-bottom: steelblue 0px solid;    
+    border-right:  steelblue 0px solid;
+    border-left:  steelblue 0px solid;
+    border-top: steelblue 0px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+    background-color: #15317E;
+   
+}
+.tabs .open a, .tabs .closed a:hover
+{
+    display: flex;
+    color:var(--wtk-white);
+}
+
+/* =====================================================================Side Navbar Menu ================ */
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 38px;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* .moduletable>h3{
+    text-align: center;
+    margin:1.5em 0;
+} */
+
+
+.breadcrumb a{
+    color:var(--wtk-primary);
+}
+/* ========== mod_article_category Module CSS ========================== */
+.side-container h4
+{
+    font-size: 20px;
+    color: var(--wtk-secondary);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.side-container h4:after
+{
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: var(--wtk-primary);
+    display: block;
+    margin-top: 6px;
+}
+
+.contact-list-name
+{
+font-size: 20px;
+    color: var(--wtk-secondary);
+}
+.contact-list-name a
+{
+    font-size: 20px;
+    color: var(--wtk-secondary);
+}
+
+.contact-list-name a:hover
+{
+    /* color:var(--wtk-primary); */
+	color:var(--wtk-primary)!important;
+}
+
+.contact-list-name a:after{
+    content: '';
+    /* position: absolute; */
+    width: 60px; height: 2px;
+    display: block;
+    margin-top: 3px;
+    /* right: 15px; */
+    background: var(--wtk-primary);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+   
+  .contact-list-name a:hover:after{
+    width: 100%;
+    /* left: 15px; */
+    background: var(--wtk-primary);
+  }
+
+.contact-images {
+    max-width: 90px;
+    width: 90px;
+    height: 95px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+.shadow2
+{
+	-webkit-box-shadow: 5px 5px 15px 0px var(--wtk-light);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    5px 5px 15px 0px var(--wtk-light);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         5px 5px 15px 0px var(--wtk-light);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.shadow1
+{
+	-webkit-box-shadow: 5px 10px 10px -5px var(--wtk-light);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    5px 10px 10px -5px var(--wtk-light);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         5px 10px 10px -5px var(--wtk-light);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	
+}
+
+.category-sub-title 
+{
+font-size: 16px;
+    color: var(--wtk-secondary);
+}
+.category-sub-title a
+{
+    font-size: 16px;
+    color: var(--wtk-secondary);
+}
+
+.category-sub-title a:hover
+{
+    color:var(--wtk-primary);
+}
+
+.category-sub-title a:after{
+    content: '';
+    /* position: absolute; */
+    width: 0; height: 1px;
+    display: block;
+    margin-top: 3px;
+    /* right: 15px; */
+    background: var(--wtk-primary);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+   
+  .category-sub-title a:hover:after{
+    width: 100%;
+    /* left: 15px; */
+    background: var(--wtk-primary);
+  }
+
+
+.categories-module li a 
+{
+color: var(--wtk-secondary);
+font-size: 14px;
+text-transform: uppercase;
+border-bottom: 1px solid #f0f0f0;
+line-height: 18px;
+display: block;
+text-decoration: none; 
+}
+
+.categories-module li a:hover 
+{
+color: var(--wtk-primary); 
+}
+
+.categories-module li:last-child a 
+{
+border-bottom: 0; 
+}
+
+/* .item-page p img{ */
+    /* width: 100%; */
+    /* padding: 15px 0px; */
+    /* max-width: 400px; */
+    /* height: auto; */
+    /* float: left; */
+    /* margin: auto; */
+    /* display: block; */
+    /* transition: transform ease .5s; */
+/* } */
+/* .item-page p img:hover{ */
+    /* transform: scale(1.02); remove on 02-07-2020*/
+/* } */
+/* ========== mod_article_news Module CSS ========================== */
+
+.newsflash p img{
+    width:50%!important;
+    float:left;
+    padding:15px 15px 15px 0;
+    height:auto!important;
+	clear: both;
+    /* margin: 0 0 20px 0;  */
+    transition: transform ease .5s;
+    border-radius: 5px;
+}
+.newsflash p img:hover{
+    transform: scale(1.02);
+}
+
+.sub-title:after
+{
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: var(--wtk-primary);
+    display: block;
+    margin-top: 6px; 
+}
+.sub-title
+{
+    font-size: 16px;
+    color: var(--wtk-secondary);
+}
+
+.sub-title a
+{
+    font-size: 16px;
+    color: var(--wtk-secondary);
+}
+
+.sub-title a:hover
+{
+    color:var(--wtk-primary);
+}
+/*=================== mod_article_news Module End here ==================================*/
+
+/*=================== Department Category article date-23-06-2020 ==================================*/
+.card-box {
+  position: relative;
+  min-height:250px;
+}
+
+.card-box .image {
+  display: block;
+  width: 100%;  
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 71, 115, 0.9);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.card-box:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;  
+  margin-top: -10px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.text ul{
+padding-left:0px;
+list-style: none;}
+
+.department-name {    
+    color: var(--wtk-secondary);
+}
+.department-name a, .department-name a:hover{    
+    
+	text-decoration:none;
+}
+.department-name a:hover{    
+    color: #ADD8E6!important;
+	}
+.department-name a:after {
+    content: '';
+    /* position: absolute; */
+    width: 60px;
+    height: 2px;
+    display: block;
+    margin-top: 3px;
+    /* right: 15px; */
+    background: var(--wtk-primary);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    /* height: 10%; */
+    /* width: 10%; */
+    outline:rgba(0, 0, 0, 0.3);
+    background-color:rgba(0, 0, 0, 0.3); 
+    background-size: 100%, 100%;
+   
+    border: 0px solid black;
+}
+ .carousel-control-prev-icon {
+font-family:"FontAwesome", sans-serif;
+content:"\f137";
+font-size:1rem;font-weight:900;
+}
+.carousel-control-next-icon
+ {
+font-family:"FontAwesome", sans-serif;
+content:"\f138";
+font-size:1rem;font-weight:900;
+}
+/*=================== Department Category article end date ==================================*/
+
+
+/*==============Contact us article CSS start here ===========================*/
+.contactus-card .card-body{
+min-height:220px;
+}
+
+.contactus-card .card-header
+{
+	background-color:var(--wtk-secondary);
+	font-size:18px;
+	padding: .5rem .75rem;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+@media (max-width: 992px) {
+
+    /* .sticky-content .navbar-collapse.collapsing .flyout-menu { */
+        /* display: block; */
+        /* position: fixed; */
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: -100%; */
+        /* transition: all 0.5s ease; */
+    /* } */
+
+    /* .sticky-content .navbar-collapse.show .flyout-menu { */
+        /* position: fixed; change this on 04-09-2020 */
+		/* top: 92px; */
+		/* border-top: 1px solid var(--wtk-white); */
+        /* top: 96px; made changes on 24-06-2020 */
+        /* bottom: 0; */
+        /* left: 0; */
+        /* padding: 6px 0px; */
+        /* background-color: var(--wtk-primary); */
+        /* flex-direction: column; */
+        /* height: auto; */
+        /* width: 300px; */
+        /* transition: left 0.5s ease; */
+        /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+    /* } */
+    /* .top-menu .navbar-collapse.collapsing .sj-flat-menu { */
+        /* display: block; */
+        /* position: fixed; */
+        /* top: 0; */
+        /* bottom: 0; */
+        /* left: -100%; */
+        /* transition: all 0.5s ease; */
+    /* } */
+
+    /* .top-menu .navbar-collapse.show .sj-flat-menu { */
+        /* position: fixed; */
+        /* top: 40px; */
+        /* bottom: 0; */
+        /* left: 0; */
+        /* padding: 10px; */
+        /* background-color: var(--wtk-light); */
+        /* flex-direction: column; */
+        /* height: auto; */
+        /* width: 300px; */
+        /* transition: left 0.5s ease; */
+        /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+    /* } This code is remove on 04-09-2020 because we not use SJ flat menu on top bar*/
+    .dept p:nth-child(1)
+    {
+        font-size:3.5vw;/* display: none!important; change on 25-06-2020*/
+    }
+	.header-logo
+	{
+		width:90px!important;
+	}
+	.dept
+	{
+		margin-top: 5px;
+	}
+	.main-content {
+    min-height: 450px;
+	/* margin-top:85px; */
+	width:100%!important;
+	}
+}
+@media (max-width:767px){
+	.navbar-expand-md .navbar-collapse {
+    background: var(--wtk-light)!important;
+	}
+}
+@media (max-width:768px){
+	
+    .newsflash-item
+	{
+		width:90%;
+		float:left;
+		margin:10px;
+		text-align:justify;
+	}
+	.tabs
+	{
+		display: inline;   
+		padding: 5px;
+	}
+
+	.main-menu-stick{
+		top: 0px!important;
+	}
+
+	.main-menu-stick.sticky-content{
+		top: 37px!important;
+		z-index: 500;
+	}
+	.header-logo
+	{
+		left: 10px;
+		top: 5px;
+	}
+	.header-logo>img
+	{
+		width: 100px!important;
+	}
+	.main-menu-stick .navbar-brand{
+		display: block;
+		visibility: hidden;
+		
+	}
+	.main-menu-stick.sticky-content .navbar-brand{
+		display: block;
+		visibility: visible;
+		
+
+	}
+	.mob-logo img{
+	 display: block;
+	 margin: auto;
+	}
+	.dept p:nth-child(1)
+	{
+	   font-size: 4.5vmin;
+	   
+	}
+	
+	.wtk-lang-bar
+	{		
+		top: 5px;		
+	}
+        .wtk-text h2
+	{
+	     font-size:5vmin;
+	}
+	.wtk-overlay-menu {
+    position: relative;
+    background-color: var(--wtk-primary);
+    /* top: 30px; */
+    z-index: 300;
+    /* left: 0; */
+    /* right: 0; */
+	}
+}
+
+@media (max-width: 600px){
+	.dept p:nth-child(1) 
+	{
+		font-size: 5vmin;
+	}
+	.wtk-text h2
+	{
+	     font-size:5.5vmin;
+	}
+
+}
+
+
+/*==============Contact us article CSS end here ===========================*/
